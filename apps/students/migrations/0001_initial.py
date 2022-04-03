@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('current_class', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='corecode.studentclass')),
             ],
             options={
-                'ordering': ['surname', 'firstname', 'other_name'],
+                'ordering': ['surname', 'firstname', 'middle_name'],
             },
         ),
     ]

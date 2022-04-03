@@ -1,3 +1,6 @@
+Forked from https://github.com/adigunsherif/Django-School-Management-System.git
+
+
 # Django-School-Management-System
 
 This app is meant to be used by school manager to manage their school records:
