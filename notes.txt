@@ -1,0 +1,44 @@
+Attempting to understand the tips from here:
+
+Forked from https://github.com/CodeByLine/Django-School-Management-System
+
+it add remote https://github.com/CodeByLine/&&&
+
+python3 -m venv ./venv
+source ./venv/bin/activate
+python3 manage.py runserver
+
+
+$ pip3 install django
+$ pip3 install django-crispy-forms
+$ pip3 install django-bootstrap-form
+$ pip3 install pillow
+$ pip3 install python-dotenv
+
+pip freeze > requirements.txt
+python -m pip install -r requirements.txt
+
+python3 manage.py dumpdata > seed_data.json
+python manage.py loaddata seed_data.json
+
+django-admin startproject ProjectName .
+python manage.py startapp NAME
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+try:
+	from .local_settings import *
+except ImportError:
+	print("Looks like no local file. You must be on production.")
+
+'local_settings.py':
+DEBUG = True
+ALLOWED_HOSTS = []
+  
+.env
+
+git rm -r --cached. # to remove cached files
