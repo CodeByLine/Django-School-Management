@@ -84,7 +84,7 @@ class DownloadCSVViewdownloadcsv(LoginRequiredMixin, View):
                 "registration_number",
                 "surname",
                 "firstname",
-                "other_names",
+                "middle_names",
                 "gender",
                 "parent_number",
                 "address",

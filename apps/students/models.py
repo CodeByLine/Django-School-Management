@@ -17,7 +17,7 @@ class Student(models.Model):
     registration_number = models.CharField(max_length=200, unique=True)
     surname = models.CharField(max_length=200)
     firstname = models.CharField(max_length=200)
-    other_name = models.CharField(max_length=200, blank=True)
+    middle_name = models.CharField(max_length=200, blank=True)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES, default="male")
     date_of_birth = models.DateField(default=timezone.now)
     current_class = models.ForeignKey(
@@ -37,10 +37,10 @@ class Student(models.Model):
     passport = models.ImageField(blank=True, upload_to="students/passports/")
 
     class Meta:
-        ordering = ["surname", "firstname", "other_name"]
+        ordering = ["surname", "firstname", "middle_name"]
 
     def __str__(self):
-        return f"{self.surname} {self.firstname} {self.other_name} ({self.registration_number})"
+        return f"{self.surname} {self.firstname} {self.middle_name} ({self.registration_number})"
 
     def get_absolute_url(self):
         return reverse("student-detail", kwargs={"pk": self.pk})
