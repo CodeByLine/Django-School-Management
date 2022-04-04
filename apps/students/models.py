@@ -5,6 +5,18 @@ from django.utils import timezone
 
 from apps.corecode.models import StudentClass
 
+# ln (60)
+# fn (60)
+# dob (10) (mm/dd/yyyy)
+# gender (1) (M/F)
+# residence (78)
+# education (120)
+# occupation (78)
+# email (78)
+# telephone (78)
+# app_plantostart (10) (mm/dd/yyyy)
+# app_comments (unlimited)
+# app_essay (unlimited)
 
 class Student(models.Model):
     STATUS_CHOICES = [("active", "Active"), ("inactive", "Inactive")]
